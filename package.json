@@ -1,0 +1,56 @@
+{
+  "name": "moyu-window",
+  "productName": "摸鱼鱼鱼",
+  "version": "1.0.0",
+  "description": "独立置顶的摸鱼小窗",
+  "main": "main.js",
+  "author": "Ni",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder --win"
+  },
+  "devDependencies": {
+    "electron": "^33.0.0",
+    "electron-builder": "^25.1.8"
+  },
+  "build": {
+    "appId": "com.ni.moyu.window",
+    "productName": "摸鱼鱼鱼",
+    "directories": {
+      "output": "dist",
+      "buildResources": "build"
+    },
+    "files": [
+      "main.js",
+      "preload.js",
+      "webview-preload.js",
+      "index.html",
+      "icon.png",
+      "lib/mammoth.browser.min.js",
+      "lib/comic.js"
+    ],
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        }
+      ],
+      "icon": "build/icon.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "摸鱼鱼鱼",
+      "artifactName": "摸鱼鱼鱼-安装包-${version}.${ext}"
+    }
+  },
+  "dependencies": {
+    "mammoth": "^1.13.0"
+  }
+}
