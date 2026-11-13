@@ -1,7 +1,7 @@
 {
   "name": "moyu-window",
   "productName": "摸鱼鱼鱼",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "独立置顶的摸鱼小窗",
   "main": "main.js",
   "author": "Ni",
