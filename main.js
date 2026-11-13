@@ -9,9 +9,12 @@ const crypto = require("crypto");
 app.commandLine.appendSwitch("renderer-process-limit", "4");
 app.commandLine.appendSwitch("js-flags", "--max-old-space-size=512");
 
-/* 测试模式：独立 userData，不干扰正式安装版（MOYU_TEST=1） */
+/* 测试模式：独立 userData，不干扰正式安装版（MOYU_TEST=1，可用 MOYU_PROFILE 固定目录） */
 if (process.env.MOYU_TEST) {
-  app.setPath("userData", path.join(os.tmpdir(), "moyu-test-profile-" + Date.now()));
+  const name = process.env.MOYU_PROFILE
+    ? "moyu-test-profile-" + process.env.MOYU_PROFILE
+    : "moyu-test-profile-" + Date.now();
+  app.setPath("userData", path.join(os.tmpdir(), name));
 }
 
 const PORT = +process.env.MOYU_PORT || 47823;
