@@ -2,6 +2,8 @@
 
 一个放在屏幕角落的**置顶摸鱼小窗**：无边框迷你浏览器 + 文档/漫画阅读器，`Alt+Q` 一键隐身。
 
+[**⬇ 下载 Windows 安装包**](https://github.com/ni4fox/moyu-yuyu/releases/latest)　·　[MIT License](LICENSE)
+
 ![screenshot](docs/screenshot.png)
 
 ## 功能
@@ -43,7 +45,7 @@
 
 ## 安装
 
-从 [Releases](../../releases) 下载 `摸鱼鱼鱼-安装包-x.x.x.exe`，双击安装即可。
+从 [Releases](../../releases/latest) 下载 `moyu-yuyu-setup-x.x.x.exe`，双击安装即可。
 
 - 仅支持 Windows 10 / 11（x64）
 - 不需要管理员权限，安装在当前用户目录
